@@ -1,61 +1,93 @@
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-}
-
 * {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {
-	font-size: 3em;
-	
+header {
+	background-color:  #F1F1F1;
+	text-align: center;
+	padding: 1.25em;
 }
 
-header {
+header img {
+	width: 8em;
+}
+
+header nav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+header nav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 1em 1em;
+	text-decoration: none;
+}
+
+header nav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+header nav a:active {
+	background-color: #696867;
+	color: white;
+}
+
+header input {
 	width: 100%;
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0em;
+    display: inline-block;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+section {
+	background-color: #F1F1F1;
+	margin: 1em 0em;
+	padding: 1em;
+}
+
+input {
+	width: 100%;
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0em;
+    display: inline-block;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+form {
+	border-radius: 0.3125em;
+    background-color: #f2f2f2;
+    padding: 1.25em;
 }
 
 article {
-	width:  100%;
-	height: 30em;
-	transition: 1s;
-	overflow: hidden;
-}
-
-article h3 {
-	font-size: 1.3em;
+	box-shadow: 0 0.25em 0.5em 0em rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 0.3125em;
+    background-color: white;
 }
 
 article:hover {
-	box-shadow:  0 1em 2em 0 rgba(0,0,0,0.2);
+	box-shadow: 0em 0.5em 1em 0em rgba(0,0,0,0.2);
 }
 
-/* Style all font awesome icons */
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
+article h3 {
+	padding: 0.125em 1em;
 }
 
-/* Add a hover effect if you want */
-.fa:hover {
-    opacity: 0.7;
+article p {
+	padding: 0em 1em 1.5em 1em;
 }
 
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
+article img {
+    border-radius: 0.3125em 0.3125em 0em 0em;
+    width: 100%;
 }
