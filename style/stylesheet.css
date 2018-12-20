@@ -1,49 +1,90 @@
 * {
 	font-family: 'Source Sans Pro', sans-serif;
 }
-
-header {
-	background-color:  #F1F1F1;
-	text-align: center;
-	padding: 1.25em;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition:  all .21s;
 }
 
-header img {
-	width: 8em;
+
+li {
+	list-style-type: none;
 }
 
-header nav {
-	overflow: hidden;
-	background-color: #333;
+header button {
+	background-color: white;
+	border: none;
+	display: flex;
 }
 
-header nav a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 1em 1em;
-	text-decoration: none;
+header nav ul li button img[href*="img/search.svg"] {
+	background-color: red;
 }
 
-header nav a:hover {
-	background-color: #ddd;
-	color: black;
+header nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1em
 }
 
-header nav a:active {
-	background-color: #696867;
-	color: white;
+header nav ul li{
+	width: 2em;
+	display: flex; 
 }
 
-header input {
+header nav ul li img{
 	width: 100%;
-    padding: 0.75em 1.25em;
-    margin: 0.5em 0em;
-    display: inline-block;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.25em;
-    box-sizing: border-box;
+}
+
+header nav ul li:nth-of-type(2) {
+	width: 5em;
+}
+
+main div:first-of-type {
+	left: -100%;
+}
+
+main div.menuopen {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+section:first-of-type {
+	background-color: white;
+	padding: 0em 5em 0em 0em;
+	border: 1px solid black;
+	height: 100%;
+	position: fixed;
+	top:  0;
+	margin-top: 0;
+	border: none;
+	border-right: 1em solid red;
+	width: 80%;
+	z-index: 2;
+	left:  -100%;
+}
+
+section.menuopen {
+	background-color: white;
+	padding: 0em 5em 0em 0em;
+	border: 1px solid black;
+	height: 100%;
+	position: fixed;
+	top:  0;
+	margin-top: 0;
+	border: none;
+	border-right: 1em solid red;
+	width: 80%;
+	z-index: 2;
 }
 
 section {

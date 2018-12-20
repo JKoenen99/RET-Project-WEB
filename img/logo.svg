@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.281 40.392">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #d82331;
+      }
+
+      .cls-1 {
+        font-size: 12px;
+        font-family: SourceSansPro-BoldItalic, Source Sans Pro;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: 0.22em;
+      }
+    </style>
+  </defs>
+  <g id="Group_16" data-name="Group 16" transform="translate(-147 -14.608)">
+    <text id="VERHALEN" class="cls-1" transform="translate(184 52)"><tspan x="-36.522" y="0">VERHALEN</tspan></text>
+    <g id="logo" transform="translate(149.374 14.608)">
+      <path id="Path_1" data-name="Path 1" class="cls-2" d="M148.45,15.921h-8.418L135.44,37.539h-7.429L132.6,15.921H105.5l1.116-5.421h42.918l-1.084,5.421Z" transform="translate(-72.626 -10.5)"/>
+      <path id="Path_2" data-name="Path 2" class="cls-2" d="M116.8,49.921,117.92,44.5h-19L97.8,49.921h19" transform="translate(-67.381 -33.659)"/>
+      <path id="Path_3" data-name="Path 3" class="cls-2" d="M15.409,15.952h3.029c2.391,0,4.878.255,4.209,3-.67,2.774-3.029,2.933-5.389,2.933H14.229l-1.244,5.2h2.9c2.9,0,3.731,1.849,3.731,4.719,0,1.977.064,3.7-.128,5.771H49.718l1.116-5.421H26.824c0-.319.032-.765.032-1.18.032-1.913.064-5.9-3.826-6.441l.032-.159c4.018-.733,6.122-2.168,7.493-6.855.829-5.293-3.7-7.015-8.928-6.919l-5.006-.1ZM2.4,37.6H4.122L9.989,10.5H8.267Z" transform="translate(-2.4 -10.5)"/>
+    </g>
+  </g>
+</svg>
