@@ -11,14 +11,20 @@ zoekbutton.addEventListener('click', function(){
 console.log('Het script is geladen');
 var burgermenuknop = document.querySelector('button');
 var burgerzijmenu = document.querySelector('section');
-var wegburgerknop = document.querySelector('div');
+var wazigeachtergrond = document.querySelector('div');
 
 burgermenuknop.addEventListener('click', function() {
     burgerzijmenu.classList.add('menuopen');
-    console.log('Het burgerzijmenu is getoond')
+    wazigeachtergrond.classList.add('menuopen');
+    console.log('Het burgerzijmenu is getoond');
 });
 
-wegburgerknop.addEventListener('click', function() {
-	burgerzijmenu.classlist.remove('menuopen');
+wazigeachtergrond.addEventListener('click', function() {
+	burgerzijmenu.classList.remove('menuopen');
+	wazigeachtergrond.classList.remove('menuopen');
 	console.log('Het burgerzijmenu is verborgen');
 });
+
+
+// terwijl de de section class 'menuopen' heeft wil ik dat de rest van de pagina niet scrollbaar is dus: y-overflow.
+
