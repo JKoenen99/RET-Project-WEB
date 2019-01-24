@@ -11,7 +11,7 @@
 section:first-of-type {
 	background-color: white;
 	padding: 0em 0em 0em 0em;
-	border: 1px solid black;
+	border: 0.0625em solid black; /* 1/16 */
 	height: 100%;
 	position: fixed;
 	top:  0;
@@ -22,27 +22,6 @@ section:first-of-type {
 	width: 80%;
 	z-index: 2;
 	text-align: center;
-}
-
-@media only screen and (min-width: 60em) {
-	main section.container {
-		margin: 0em 8em;
-	}
-
-	section.background-container {
-		height: 30em;
-
-	}
-
-	img[src*="img/slogan.svg"] {
-		width: 100%;
-		height: 28em;
-		object-fit: cover;
-	}
-
-	section.menuopen {
-		width: 30em;
-	}
 }
 
 
@@ -59,7 +38,7 @@ header {
 	top: 0;
 	width: 100%;
 	background-color: #FFFFFF;
-	box-shadow: 0px 2px 5px grey;
+	box-shadow: 0em 0.125em 0.3125em grey; /* 0/16 */ /* 2/16 */ /* 5/16 */
 }
 
 header button {
@@ -129,7 +108,8 @@ section nav ul li {
 	display: flex;
 	margin: 1em 0em;
 	justify-content: center;
-	border: 1px solid black;
+	border-top: 0.0625em solid #EFEFF4; /* 1/16 */
+	border-bottom: 0.0625em solid #EFEFF4; /* 1/16 */
 	padding: 1em 0em;
 }
 
@@ -166,23 +146,11 @@ main section:nth-of-type(3) {
 	background-color: white;
 }
 
-input {
-	width: 100%;
-    padding: 0.75em 1.25em;
-    margin: 0.5em 0em;
-    display: inline-block;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.25em;
-    box-sizing: border-box;
-}
-
 article {
 	box-shadow: 0 0.25em 0.5em 0em rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0.3125em;
     background-color: white;
-    width: 20.313em;
-    margin: 1em 0em;
 }
 
 article h3 {
@@ -202,8 +170,163 @@ main {
 	background-color: #F5F5F6;
 }
 
-.verhalencontainer {
-	display: flex;
-	flex-wrap:  wrap;
+main section.container {
+	border-radius: 0.3125em;
+	box-shadow: 0 0.25em 0.5em 0em rgba(0,0,0,0.2);
+}
 
+main section.actie {
+	background-color: #00477F;
+	color: white;
+	padding: 1em 8em
+}
+
+main section.actie h2 {
+	margin: 1em 0em;
+	font-size: 1em;
+}
+
+main section.actie button {
+	background-color: white;
+	color: #13679C;
+	border-radius: 0.3125em; /* 5/16 */
+	border: none;
+	padding: 1em;
+	font-weight: 600;
+}
+
+main section.actie button span {
+	color: red;
+	margin: 0em 0em 0em 2em;
+}
+
+span.line {
+	border-bottom: 0.125em solid #ed1a2d; /* 2/16 */
+	display: block;
+	width: 7em;
+}
+
+article a img {
+	width: 100%;
+	object-fit: cover;
+}
+
+article footer {
+	color: black;
+}
+
+article footer span {
+	color: #00477f;
+}
+
+@media only screen and (max-width: 30em) {
+	article {
+		margin: 1em 0em;
+		width: 100%;
+	}
+
+	main section.container {
+		margin: 1em;
+	}
+
+	main section.actie {
+		padding: 1em;
+	}
+
+	.verhalen-container {
+		display: grid;
+		grid-template-columns: auto;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+	main {
+		font-size: 0.9em;
+	}
+	article {
+		margin: 1em 0em;
+	}
+
+	main section.container {
+		margin: 0em 2em;
+	}
+	
+	main section.actie {
+		padding: 3em 2em;
+	}
+
+	section.background-container {
+		height: 30em;
+
+	}
+
+	img[src*="img/slogan.svg"] {
+		width: 100%;
+		height: 24em;
+		object-fit: cover;
+	}
+
+	section.menuopen {
+		width: 25em;
+	}
+
+	.verhalen-container {
+		display: grid;
+		grid-template-columns:  auto auto;
+		grid-column-gap: 1em;
+	}
+
+	.verhaal-3 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+}
+
+@media only screen and (min-width: 60em) {
+	main section.container {
+		margin: 0em 8em;
+	}
+	
+	main section.actie {
+		padding: 3em 8em;
+	}
+
+	section.background-container {
+		height: 30em;
+
+	}
+
+	img[src*="img/slogan.svg"] {
+		width: 100%;
+		height: 24em;
+		object-fit: cover;
+	}
+
+	section.menuopen {
+		width: 30em;
+	}
+
+	main section.actie h2 {
+		font-size: 1.4em;
+	}
+
+	.verhalen-container {
+		display: grid;
+		grid-template-columns:  auto auto auto;
+		grid-column-gap: 1em;
+	}
+
+	.verhaal-3 {
+		grid-column-start: 3;
+
+	}
+
+	article a img {
+		height: 15em;
+	}
+}
+
+button:hover {
+	opacity: 0.8;
+	cursor: pointer;
 }
