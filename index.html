@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="style/stylesheet.css">
 		<meta charset="UTF-8">
 		<title>RET: Verhalen</title>
+		<meta name="description" content="Bekijk de actuele vertrektijden voor bus, tram, metro en Fast Ferry in de dienstregeling van de RET of plan een reis met het openbaar vervoer.">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	</head>
@@ -14,94 +15,110 @@
 			<nav>
 				<ul>
 					<li>
-						<button><img src="img/hammenu.svg">MENU</button>
+						<button class="hamburger-button"><img src="img/hammenu.svg" alt="hamburger knop">MENU</button>
 					</li>
 					<li>
-						<a href="index.html"><h1><img src="img/logo.svg"></h1></a>
+						<a href="index.html"><h1><img src="img/logo.svg" alt="logo RET"></h1></a>
 					</li>
 					<li>
-						<button><img src="img/search.svg"></button>
+						<button><img src="img/search.svg" alt="zoek icon"></button>
 					</li>
 				</ul>
 			</nav>
 		</header>
+
 		<main>
-			<section>
-				<img src="img/persona.svg">
+			<!-- hamburger menu (in eerste instantie verborgen) -->
+			<section class="hamburger-menu">
+				<img src="img/persona.svg" alt="persona">
 				<h2>Mark Willems</h2>
 				<a href="login.html">account bekijken</a>
 				<nav>
 					<ul>
-						<li><a href=""><img src="img/open-book.svg" class="icon">Verhalen overzicht</a></li>
-						<li><a href=""><img src="img/favorite-heart-button.svg" class="icon">Opgeslagen verhalen</a></li>
+						<li><a href=""><img src="img/open-book.svg" class="icon" alt="open book icon">Verhalen overzicht</a></li>
+						<li><a href=""><img src="img/favorite-heart-button.svg" class="icon" alt="favorite icon">Opgeslagen verhalen</a></li>
 					</ul>
 				</nav>
-			<footer>
-				<ul>
-					<li>
-						<a href="#">Link 1</a>
-					</li>
-					<li>
-						<a href="#">Link 2</a>
-					</li>
-				</ul>
-			</footer>
-		</section>
-		<div></div>
-
-		<section class="background-container">
-			<img src="img/slogan.svg" alt="Slogan van de RET afbeelding">
-		</section>
-
-		<section class="container">
-			<h2>Aanbevolen Verhalen</h2>
-			<div class="verhalen-container">
-				<article> 
-					<a href="verhaal.html">
-						<img src="img/onomatopee.png" alt="Onomatopee Verhaal">
-						<h3>Onomatopee (77)</h3>
-						<p>De ronk-ronk-bus komt met piiieeepende remmen tot stilstand en opent sssslissend en sssissend haar deuren. Ik stap-stap-stap uit de bus en push oef-oef de kinderwagen voort waarvan de rrrollende wielen mijn zzzlapende zoontje dragen. Sloffende mensen staren naar de grond, zingende tramkabels zwiepen tegen een grauwgrijze hemel.</p>
-						<footer>
-							<p>Vormgeving: <span>★★★★★</span></p>
-							<p>Verhaal: <span>★★★★☆</span></p>
-						</footer>
-					</a>
+				<footer>
+					<ul>
+						<li>
+							<a href="#">Link 1</a>
+						</li>
+						<li>
+							<a href="#">Link 2</a>
+						</li>
+					</ul>
+				</footer>
+			</section>
+			<div class="white-overlay"></div>
+			
+			<!-- 2e header afbeelding -->
+			<div class="background-container">
+				<article class="slogan">
+					<h2>Welkom bij <span>RET Verhalen</span></h2>
+					<p>Wij leveren geen reizen, wij leveren <span>ervaringen.</span></p>
 				</article>
+			</div>
 
-				<article> 
-					<a href="verhaal.html">
-						<img src="img/Lepra.jpg" alt="Lepra vormgeving">
-						<h3>Lepra (25)</h3>
-						<p>Op Centraal Station stap ik af van de kar die lijken ophaalt. Ik had een lift gekregen. Mijn zoon ligt in zijn wagentje te slapen. Arm ventje. Gelukkig weet hij niet dat er een lepra-epidemie heerst in Amsterdam. Zijn wagentje is hermetisch afgesloten, er hangt een zuurstoftankje aan. Hier leeft hij in, wij hopen dat er zo geen bacillen bij hem kunnen komen.</p>
-						<footer>
-							<p>Vormgeving: <span>★★★★★</span></p>
-							<p>Verhaal: <span>★★★★☆</span></p>
-						</footer>
-					</a>
-				</article>
 
-				<article class="verhaal-3"> 
-					<a href="verhaal.html">
-						<img src="https://cdn.shopify.com/s/files/1/0900/4590/products/IMG_8879_1024x1024.jpg?v=1516475890" alt="Keith Haring Kunstwerk">
-						<h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’ (85)</h3>
-						<p>Yo kids! Vet cool dat je weer kijkt! Hoor mijn verhaal: Ik stapte laatst de bus uit op het stadionplein. Je weet togh?! Ik duwde mijn zoon die in zijn superlauwe, gifgroene kinderwagen lag te ronken. Het was druk op het plein, maar de mensen waren me toch een partijtje chaggie! Niet normaal meer.</p>
-						<footer>
-							<p>Vormgeving: <span>★★★★★</span></p>
-							<p>Verhaal: <span>★★★★☆</span></p>
-						</footer>
-					</a>
-				</article>
-			</div>	
-		</section>
-		<section class="actie">
-			<span class="line">
-			</span>
-			<h2>
+			<!-- Aanbevolen verhalen -->
+
+			<section class="verhalen">
+				<h2>Aanbevolen verhalen</h2>
+
+				<div class="cards">
+
+						<a class="card" href="verhaal.html">
+							<div class="onomatopee"></div>
+							<article class="card__content">
+								<h3 class="card__title">Onomatopee (77)</h3>
+								<span class="line"></span>
+								<p class="card__text">De ronk-ronk-bus komt met piiieeepende remmen tot stilstand en opent sssslissend en sssissend haar deuren. Ik stap-stap-stap uit de bus en push oef-oef de kinderwagen voort waarvan de rrrollende wielen mijn zzzlapende zoontje dragen. Sloffende mensen staren naar de grond, zingende tramkabels zwiepen tegen een grauwgrijze hemel.</p>
+								<footer>
+									<p>Vormgeving: <span class="stars">★★★★★</span></p>
+									<p>Verhaal: <span class="stars">★★★★☆</span></p>
+								</footer>
+							</article>
+						</a>
+						
+						<a class="card" href="verhaal.html">
+							<div class="lepra"></div>
+							<article class="card__content">
+								<h3 class="card__title">Lepra (25)</h3>
+								<p class="card__text">Op Centraal Station stap ik af van de kar die lijken ophaalt. Ik had een lift gekregen. Mijn zoon ligt in zijn wagentje te slapen. Arm ventje. Gelukkig weet hij niet dat er een lepra-epidemie heerst in Amsterdam. Zijn wagentje is hermetisch afgesloten, er hangt een zuurstoftankje aan. Hier leeft hij in, wij hopen dat er zo geen bacillen bij hem kunnen komen.</p>
+								<footer>
+									<p>Vormgeving: <span class="stars">★★★☆☆</span></p>
+									<p>Verhaal: <span class="stars">★★★★☆</span></p>
+								</footer>
+							</article>
+						</a>
+
+						<a class="card" href="verhaal.html">
+							<div class="presentator"></div>	<!-- Hier een div gebruikt om een background-image toe te voegen met css want dan kan ik cover gebruiken om afbeelding mooi te schalen. -->
+							<article class="card__content">
+								<h3 class="card__title">Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’ (85)</h3>
+								<p class="card__text">Yo kids! Vet cool dat je weer kijkt! Hoor mijn verhaal: Ik stapte laatst de bus uit op het stadionplein. Je weet togh?! Ik duwde mijn zoon die in zijn superlauwe, gifgroene kinderwagen lag te ronken. Het was druk op het plein, maar de mensen waren me toch een partijtje chaggie! Niet normaal meer.</p>
+								<footer>
+									<p>Vormgeving: <span class="stars">★★★★☆</span></p>
+									<p>Verhaal: <span class="stars">★★☆☆☆</span></p>
+								</footer>
+							</article>
+						</a>
+
+				</div>
+
+			</section>
+
+
+			<section class="actie">
+				<span class="line">
+				</span>
+				<h2>
 				Op zoek naar een verhaal op maat? Bekijk de Verhalen zoekpagina!
-			</h2>
-			<a href="#"></a><button>Naar de zoekpagina gaan <span>-></span></button></a>
-		</section>
-</main>
-<script type="text/javascript" src="scripts/script.js"></script>
-</body>
+				</h2>
+				<a href="#"></a><button>Naar de zoekpagina gaan <span>-></span></button></a>
+			</section>
+		</main>
+		<script type="text/javascript" src="scripts/script.js"></script>
+	</body>
 </html>

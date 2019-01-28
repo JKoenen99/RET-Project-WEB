@@ -1,3 +1,8 @@
+<!-- Bronnen
+		FORMS
+			https://github.com/vasilisvg/blokweb-issues/blob/master/html/formulieren-html.md
+			https://www.w3schools.com/howto/howto_css_login_form.asp
+-->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -14,38 +19,32 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="index.html"><img src="img/back-arrow.svg"></a>
+						<a href="index.html"><img class="back-arrow" src="img/back-arrow.svg" alt="terug knop"></a>
 					</li>
 					<li>
-						<a href="index.html"><img src="img/logo.svg"></a>
+						<h1><a href="index.html"><img src="img/logo.svg" alt="home knop"></a></h1>
 					</li>
 					<li>
-						<button><img src="img/search.svg"></button>
+						<button><img src="img/search.svg" alt="zoek knop"></button>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-				<form action="index.html">
-					<fieldset class="container">
-						<div class="imgcontainer">
-						<img src="http://archive.icann.org/meetings/icann56/cdn.schd.ws/common/img/avatar-empty.png" alt="Avatar" class="avatar">
-					</div>
+			<!-- Wilde hier een section toevoegen maar wilde geen h2 of h3 (want 'inloggen' staat al in de legend). Wordt alleen gebruik voor stijling deze div. -->
+			<div class="login-box">							
+				<form class="login" action="index.html">
+					<fieldset>
 						<legend>Inloggen</legend>
-						<label for="mail" >E-mail</label>
-     					<input id="mail" type="email" name="email" required placeholder="Voer een geldig e-mail adres in">  
-						<label for="password">Wachtwoord</label>
-     					<input id="password" type="password" name="password" required>
-     					<a href="index.html"><button type="submit" class="submitbtn">Login</button></a>
-						<label>
-							<input type="checkbox" checked="checked" name="remember"> Onthoud mij
-						</label>
-						<div class="container">
-							<button type="button" class="cancelbtn">Cancel</button>
-						<span class="psw"><a href="#">Wachtwoord</a> vergeten?</span>
-						</div>
+						<label for="email">Email</label>
+						<input type="email" name="login" id="email" placeholder="naam@email.com" required>
+						<label for="wachtwoord">Wachtwoord</label>
+						<input type="password" name="login" id="wachtwoord" placeholder="********" required minlength="8" maxlength="24">
+						<button class="standaardbtn" type="submit" value="aanmelden">Log in</button>
+						<a class="vergeten">wachtwoord vergeten?</a>
 					</fieldset>
 				</form>
+			</div>
 		</main>
 	</body>
 </html>

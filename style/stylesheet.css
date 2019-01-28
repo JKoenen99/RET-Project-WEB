@@ -1,3 +1,10 @@
+/* Algemene Styling */
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
 * {
 	font-family: 'Source Sans Pro', sans-serif;
 }
@@ -8,37 +15,37 @@
   transition:  all .21s;
 }
 
-section:first-of-type {
-	background-color: white;
-	padding: 0em 0em 0em 0em;
-	border: 0.0625em solid black; /* 1/16 */
-	height: 100%;
-	position: fixed;
-	top:  0;
-	left:  -100%;
-	margin-top: 0;
-	border: none;
-	border-right: 1.2em solid red;
-	width: 80%;
-	z-index: 2;
-	text-align: center;
-}
-
-
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
-li {
-	list-style-type: none;
+main {
+	background-color: #F5F5F6;
+	margin-top: 3.25em;
+	text-rendering: optimizeLegibility;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
 }
+
+button:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* Header Styling */
 
 header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: #FFFFFF;
-	box-shadow: 0em 0.125em 0.3125em grey; /* 0/16 */ /* 2/16 */ /* 5/16 */
+	background: #FFFFFF;
+	z-index: 11;
+	display: block;
+	transition: ease background .5s;
+	-webkit-box-shadow: 0em 0.3125em 0.5em -0.125em rgba(0,0,0,0.25); 
+  	-moz-box-shadow: 0em 0.3125em 0.5em -0.125em rgba(0,0,0,0.25); 
+  	box-shadow: 0em 0.3125em 0.5em -0.125em rgba(0,0,0,0.25); 
 }
 
 header button {
@@ -55,16 +62,8 @@ header nav ul li button img[src*="img/search.svg"] {
 	padding: 0.8em;
 }
 
-img[src*="img/slogan.svg"] {
-	margin-top: 4.2em;
-	z-index: 0;
-}
-
-img[src*="img/onomatopee.svg"] {
-	margin-top: 5.2em;
-}
-
 header nav ul {
+	margin: 0em 0em;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -84,19 +83,42 @@ header nav ul li:nth-of-type(2) {
 	width: 5em;
 }
 
-main div:first-of-type {
-	left: -100%;
+/* Hamburger Menu Styling */
+
+section.hamburger-menu {
+	background-color: white;
+	padding: 0em 0em 0em 0em;
+	border: 0.0625em solid black; /* 1/16 */
+	height: 100%;
+	position: fixed;
+	top:  0;
+	left:  -100%;
+	margin-top: 0;
+	border: none;
+	border-right: 1.2em solid #D82331;
+	width: 80%;
+	z-index: 99;
+	text-align: center;
 }
 
-main div.menuopen {
+
+main div.white-overlay {
+	z-index: 98;
+	display: none;
+	opacity: 0;
+	transition: 1s;
+}
+
+main div.white-overlay.menuopen {
 	position: fixed;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(255, 255, 255, 0.5);
 	top: 0;
+	display: block;
+	opacity: 1;
+	transition: 1s;
 }
-
 
 section img[src*="persona"] {
 	margin: auto;
@@ -104,7 +126,7 @@ section img[src*="persona"] {
 	padding-top: 2em;
 }
 
-section nav ul li {
+section.hamburger-menu nav ul li {
 	display: flex;
 	margin: 1em 0em;
 	justify-content: center;
@@ -116,12 +138,13 @@ section nav ul li {
 section nav ul {
 	margin: 7em 0em 0em 0em;
 }
+
 img.icon {
 	width: 10%;
 	margin: 0em 1em 0em 0em;
 }
 
-section:first-of-type li {
+section.hamburger-menu li {
 	width: 100%;
 }
 
@@ -129,56 +152,181 @@ section.menuopen {
 	left: 0;
 }
 
-section {
-	background-color: #F1F1F1;
-	margin: 1em 0em;
+/* Stijling Header afbeelding (SLOGAN) */
+.slogan {
+	color: #FFFFFF;
+	// background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 0.2em;
 	padding: 1em;
 }
 
-main section:nth-of-type(2) {
-	width: 100%;
-	padding: 0;
-	margin: 0;
+.slogan h2 {
+	font-family: "The Sans","Source Sans Pro",Arial;
+	font-size: 2em;
+	font-weight: normal;
+	border-bottom: 3px solid #00477f;
+	padding: 0em 0em 0.5em;
+	letter-spacing: -.3px;
 }
 
-main section:nth-of-type(3) {
-	margin-top: 0;
-	background-color: white;
+.slogan h2 span {
+	font-weight: bold;
 }
 
-article {
-	box-shadow: 0 0.25em 0.5em 0em rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 0.3125em;
-    background-color: white;
+.slogan p {
+	padding: 0.5em 0em 0em;
+	font-weight: 500;
 }
 
-article h3 {
-	padding: 0.125em 1em;
-}
-
-article p {
-	padding: 0em 1em 1.5em 1em;
-}
-
-article img {
-    border-radius: 0.3125em 0.3125em 0em 0em;
+div.background-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+    height: 40vh;
+    background: linear-gradient(rgba(0, 157, 219, 0), rgba(0, 79, 110, 1)), url("../img/london-underground.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 1.25em 3.125em;
     width: 100%;
+    text-align: center;
+    z-index: 1;
 }
 
-main {
-	background-color: #F5F5F6;
+
+
+/* Stijling Aanbevolen verhalen */
+
+section.verhalen h2 {
+	text-align: center;
 }
 
-main section.container {
-	border-radius: 0.3125em;
-	box-shadow: 0 0.25em 0.5em 0em rgba(0,0,0,0.2);
+section.verhalen {
+	width: 90vw;
+	position: relative;
+	margin: -1.875em auto 1.875em;
+	z-index: 10;
+	border-radius: 0.5em;
+	box-shadow:  0px 5px 8px -2px rgba(0,0,0,0.25);
+	background-color: white;
+	padding: 1em;
+	transition: 0s;
 }
+
+.cards {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 1rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.2em;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+	margin: 1rem;
+	flex-grow: 1;
+	cursor: pointer;
+}
+/* 	margin: 1.2em 0em 1.25em;
+ */
+
+.card__content {
+	display: flex;
+  	flex: 1 1 auto;
+  	flex-direction: column;
+  	padding: 1rem;
+}
+
+.card__text {
+	flex: 1 1 auto;
+	font-size: 0.975rem;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+	margin-top: 0.5rem;
+}
+
+a.card:hover .onomatopee {
+	filter: contrast(100%);
+}
+
+a.card:hover .lepra {
+	filter: contrast(100%);
+}
+
+a.card:hover .presentator {
+	filter: contrast(100%);
+}
+
+.onomatopee {
+	height: 250px;
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	border-top-left-radius: 0.25rem;
+  	border-top-right-radius: 0.25rem;
+  	filter: contrast(70%);
+  	//filter: saturate(180%);
+  	overflow: hidden;
+  	position: relative;
+	background-image: url("../img/onomatopee.png");
+}
+
+.lepra {
+	height: 250px;
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	border-top-left-radius: 0.25rem;
+  	border-top-right-radius: 0.25rem;
+  	filter: contrast(70%);
+  	//filter: saturate(180%);
+  	overflow: hidden;
+  	position: relative;
+	background-image: url("../img/lepra.jpg");
+}
+
+.presentator {
+	height: 250px;
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	border-top-left-radius: 0.25rem;
+  	border-top-right-radius: 0.25rem;
+  	filter: contrast(70%);
+  	//filter: saturate(180%);
+  	overflow: hidden;
+  	position: relative;
+	background-image: url("../img/pulpsw.jpg");
+}
+
+.stars {
+	font-weight: 800;
+	color: #00477f;
+}
+
+
+.card footer p {
+	margin-block-end: 0em;
+	float: right;
+	margin: 0em 1em 0em;
+}
+
+/* Actie element (call to action button) */
 
 main section.actie {
+	margin: 5em 0em;
 	background-color: #00477F;
 	color: white;
-	padding: 1em 8em
+	padding: 3em 15%;
+	position: relative;
+	z-index: 10;
 }
 
 main section.actie h2 {
@@ -196,7 +344,7 @@ main section.actie button {
 }
 
 main section.actie button span {
-	color: red;
+	color: #ed1a2d;
 	margin: 0em 0em 0em 2em;
 }
 
@@ -206,100 +354,62 @@ span.line {
 	width: 7em;
 }
 
-article a img {
-	width: 100%;
-	object-fit: cover;
-}
 
-article footer {
-	color: black;
-}
-
-article footer span {
-	color: #00477f;
-}
-
+/* Media Queries */
 @media only screen and (max-width: 30em) {
-	article {
-		margin: 1em 0em;
-		width: 100%;
-	}
 
-	main section.container {
-		margin: 1em;
-	}
-
-	main section.actie {
-		padding: 1em;
-	}
-
-	.verhalen-container {
-		display: grid;
-		grid-template-columns: auto;
-	}
-}
-
-@media only screen and (min-width: 30em) {
-	main {
-		font-size: 0.9em;
-	}
-	article {
-		margin: 1em 0em;
-	}
-
-	main section.container {
-		margin: 0em 2em;
+	.card {
+		flex-grow: 0;
+		font-size: 0.8em;
 	}
 	
+	.cards {
+		padding: 0rem;
+	}
 	main section.actie {
-		padding: 3em 2em;
+		padding: 2.5em 1.5em;
 	}
 
-	section.background-container {
-		height: 30em;
+	header nav ul {
+		justify-content: space-between;
+	}
+}
 
+@media only screen and (min-width: 30em) and (max-width: 60em) {
+
+	.verhalen {
+		max-width: 80vw;
+	}
+	.card {
+		min-width: 18rem;
+		width: 40%;
 	}
 
-	img[src*="img/slogan.svg"] {
-		width: 100%;
-		height: 24em;
-		object-fit: cover;
+	.cards {
+		padding: 0rem;
+	}
+
+	main section.actie {
+		padding: 3em 10%;
 	}
 
 	section.menuopen {
 		width: 25em;
 	}
 
-	.verhalen-container {
-		display: grid;
-		grid-template-columns:  auto auto;
-		grid-column-gap: 1em;
-	}
-
-	.verhaal-3 {
-		grid-column-start: 1;
-		grid-column-end: 3;
+	header nav ul {
+		margin: 0em 2em;
 	}
 }
 
 @media only screen and (min-width: 60em) {
-	main section.container {
-		margin: 0em 8em;
-	}
 	
-	main section.actie {
-		padding: 3em 8em;
+	.verhalen {
+		max-width: 70vw;
 	}
-
-	section.background-container {
-		height: 30em;
-
-	}
-
-	img[src*="img/slogan.svg"] {
-		width: 100%;
-		height: 24em;
-		object-fit: cover;
+	.card {
+		min-width: 17rem;
+		width: 22%;
 	}
 
 	section.menuopen {
@@ -307,26 +417,15 @@ article footer span {
 	}
 
 	main section.actie h2 {
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 
-	.verhalen-container {
-		display: grid;
-		grid-template-columns:  auto auto auto;
-		grid-column-gap: 1em;
+	main section.actie {
+		padding: 3em 15%;
 	}
 
-	.verhaal-3 {
-		grid-column-start: 3;
-
-	}
-
-	article a img {
-		height: 15em;
+	header nav ul {
+		margin: 0em 5em;
 	}
 }
 
-button:hover {
-	opacity: 0.8;
-	cursor: pointer;
-}
