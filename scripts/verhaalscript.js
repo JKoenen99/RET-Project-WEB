@@ -35,12 +35,6 @@
 
 console.log('Het script is geladen'); 
 
-var witVerhaal = document.querySelector('.content-verhaal .wit');
-var geelVerhaal = document.querySelector('.content-verhaal .geel');
-var roodVerhaal = document.querySelector('.content-verhaal .rood');
-var blauwVerhaal = document.querySelector('.content-verhaal .blauw');
-
-
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;

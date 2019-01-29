@@ -1,6 +1,4 @@
-/**
- * Kaasbroodje
- */
+
 
 * {
   font-family: 'Source Sans Pro', sans-serif;
@@ -64,7 +62,7 @@
     background-color: #ED1C24;
    }
 
-   div img {
+   div.hover-img img {
     display: none;
    }
 

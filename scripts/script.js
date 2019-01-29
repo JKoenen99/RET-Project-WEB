@@ -35,3 +35,17 @@ verhaalcard.onclick = function () {
 */
 
 // terwijl de de section class 'menuopen' heeft wil ik dat de rest van de pagina niet scrollbaar is dus: y-overflow.
+
+/* code van Youtube Tutorial --> bron= YTSOLUTION */
+    var animated = false;
+    
+    $('.heart').click(function(){
+      if(!animated){
+        $(this).addClass('happy').removeClass('broken');
+        animated = true;
+      }
+      else {
+        $(this).removeClass('happy').addClass('broken');
+        animated = false;
+      }
+    }); 
