@@ -48,6 +48,13 @@ header {
   	box-shadow: 0em 0.3125em 0.5em -0.125em rgba(0,0,0,0.25); 
 }
 
+.zoek-button.active img{
+	border-radius: 0;
+}
+
+.search-wrap.active {
+	display: block;
+}
 header button {
 	background-color: white;
 	border: none;
@@ -60,6 +67,7 @@ header nav ul li button img[src*="img/search.svg"] {
 	background-color: #D82331;
 	border-radius: 100%;
 	padding: 0.8em;
+	transition: 0.5s;
 }
 
 header nav ul {
@@ -71,7 +79,8 @@ header nav ul {
 }
 
 header nav ul li{
-	width: 2em;
+	width: auto;
+	max-width: 5em;
 	display: flex; 
 }
 
@@ -82,6 +91,7 @@ header nav ul li img{
 header nav ul li:nth-of-type(2) {
 	width: 5em;
 }
+
 
 /* Hamburger Menu Styling */
 
