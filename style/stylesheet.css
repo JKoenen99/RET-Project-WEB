@@ -53,7 +53,7 @@ header {
 }
 
 .search-wrap.active {
-	display: block;
+	display: inline-block;
 }
 header button {
 	background-color: white;
