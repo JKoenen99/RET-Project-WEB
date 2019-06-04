@@ -153,9 +153,11 @@ input[type=submit] {
 
 /* Sidebar */
 aside {
+  background: white;
   z-index: -1;
   float:  left;
-  width: 20px;
+  width: 16em;
+  margin: 2em 0em 0em 1em;
 }
 
 
@@ -231,8 +233,7 @@ main {
 }
 
 main section.articles {
-  margin-left: 15em;
-  padding: 1em;
+  padding: 1em 0em;
   display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -248,6 +249,16 @@ article {
   margin: 1em;
   max-width: 20em;
 }
+
+article h2:hover, article img:hover, article p:hover{
+  opacity: .8;
+  cursor: pointer;
+}
+
+article h2:hover {
+  color:  red;
+}
+
 
 article img {
   border-radius: 12.5px 12.5px 0px 0px;
@@ -268,7 +279,7 @@ article button {
 @media screen and (max-width: 510px) {
   header ul {
     display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
@@ -276,14 +287,9 @@ article button {
     width: 100%:
   }
   
-  header li {
-    height: 10em;
-  }
-  header {
-    height: 16em;
-  }
+  
   
   main {
-    padding-top: 8em;
+    padding-top: 4em;
   }
 }
