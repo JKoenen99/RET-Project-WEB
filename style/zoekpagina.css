@@ -70,7 +70,7 @@ header li input {
 
 input.search-box {
   padding: 1em;
-  border: none;
+  border: 1px solid lightgrey;
 }
 
 input.search-box.hidden {
