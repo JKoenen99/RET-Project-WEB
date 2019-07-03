@@ -21,6 +21,7 @@ main.addEventListener('click', (e) => {
   spanicon.classList.replace('fa-times', 'fa-search');
 });
 
+
 function myFunction() {
   // Declare variables
   var input, filter, section, article, h2, i, txtValue;
